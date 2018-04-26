@@ -1,0 +1,49 @@
+.mainbackground{
+    background-image: url('/assets/img/mainback.jpg');
+        background-repeat: no-repeat;
+    background-size:cover;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+}
+
+nav a:hover{
+    transform: scale(1.2);
+    border-radius: 10px;
+    color:white;
+    background-color: rgb(0, 119, 255);
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+
+}
+
+nav a{
+    color: red;
+}
+
+nav li{
+    margin-left: 10px;
+}
+
+modalbtn:hover{
+        transform: scale(1.2);
+    border-radius: 10px;
+    color: red;
+    background-color: white;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+}
+
+input:hover{
+    background-color: rgb(223, 157, 66);
+    transform: scale(1.1);
+      transition: .5s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  backface-visibility: hidden;
+
+}
+
+
+.modalbody{
+padding:9px 15px;
+    background-color: rgba(0,0,0,0.61);
+}

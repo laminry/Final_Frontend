@@ -1,0 +1,41 @@
+.row{
+    padding-left: 20px;
+}
+
+
+
+.space{
+    padding: 20px;
+}
+
+.card-title{
+    /* background-color: rgba(0,0,0,0.61); */
+    color:black;
+}
+.space:hover{
+    transform: scale(1.1);
+    border-color: red;
+}
+
+.downbtn{
+    padding-left: 20px;
+}
+
+.infopanel{
+    background-color: rgba(0, 0, 0,0.7);
+    border-width: 4px;
+    margin-top: 150px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.injum{
+        padding-top: 30px;
+}
+
+.container img {
+    width: 100%;
+    height: 300px;
+}
+
+

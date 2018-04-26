@@ -1,0 +1,117 @@
+<div class="mainbody">
+  <div class="jumbotron container myjumbotron">
+    <div class="panel panel-primary ">
+      <div class="panel-body">
+        <form #searchform="ngForm">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Check-In</th>
+                <th>Check-Out</th>
+                <th>No. Adults</th>
+                <th>No. Children</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  <input type="date" class="form-control" id="checkin" placeholder="Check In-Date" name="Check In-Date" [(ngModel)]="filterrooms.checkin"
+                    required>
+                </th>
+                <td>
+                  <input type="date" class="form-control" id="checkout" placeholder="Check In-Date" name="Check Out-Date" [(ngModel)]="filterrooms.checkout"
+                    required>
+                </td>
+                <td>
+                  <div class="form-group">
+                    <select class="form-control" id="noadults" name="No. Adults" [(ngModel)]="filterrooms.noadults" required>
+                      <option>1</option>
+                      <option>2</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group">
+                    <select class="form-control" id="nochildren" name="No. Children" [(ngModel)]="filterrooms.nochildren" required>
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </form>
+        <div class="panel-footer" align="right">
+          <button type="submit" class="btn btn-danger" data-toggle="collapse" data-target="#result" (click)="checkSearch()">Search</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="container ">
+    <div class="container" id="result" class="collapse">
+      <div class="row">
+        <div class="card-deck mb-4 col-sm-4 space" *ngFor="let room of rooms">
+          <div class="card">
+            <img class="card-img-top imgsize" src="{{room.image}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{room.roomtype}}</h5>
+              <p class="card-text">{{room.description}}</p>
+            </div>
+            <div class="card-footer">
+              <div class="btn-group downbtn">
+                <button type="button" class="btn btn-default btn-md">
+                  <strong>Rp: {{room.price}}</strong>
+                </button>&nbsp;&nbsp;
+                <button type="button" class="btn btn-danger btn-md btn-block" routerLink="/reservation">BOOK NOW</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="https://res.cloudinary.com/dg4oldfw9/image/upload/v1524744800/welcome.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://res.cloudinary.com/dg4oldfw9/image/upload/v1524744442/two.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://res.cloudinary.com/dg4oldfw9/image/upload/v1524744271/one.jpg" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+
+  <div>
+
+  </div>
+
+</div>
+
+
+
+
+
+<div class="footer">
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,28 @@
+.page-footer {
+    background-color: #0090F7;
+    clear: both;
+    margin-left: 0px;
+    margin-right: 0px;
+    bottom: 0px;
+    position: sticky;
+    width: 100%;
+}
+
+.footer-copyright  {
+    color: white;
+    background-color:black;
+    bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.page-footer > info{
+    font-size: 1rem;
+    color: white;
+}
+.text-uppercase{
+    color: white;
+    margin-top: 0%;
+}
+.footerlinks{
+    color: red;
+}
