@@ -39,3 +39,23 @@
 }
 
 
+
+
+
+#hd{
+    color: red;
+    align-self: center;
+}
+
+#motto{
+    font-size: 15px;
+    color: white;
+}
+
+
+
+.mainbody > img{
+    height: 470px;
+    width : auto ;/*maintain aspect ratio*/
+    max-width : 370px;
+}

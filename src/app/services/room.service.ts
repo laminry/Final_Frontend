@@ -15,7 +15,7 @@ const httpOptions = {
 export class RoomService {
 
   constructor(private http: HttpClient, private http2: Http) { }
-  private url = 'http://localhost:8000/api/allrooms';
+  private url = 'http://localhost:8000/api/rooms';
 
   getRooms(): Observable<Room[]> {
     return this.http.get<Room[]>(this.url);
