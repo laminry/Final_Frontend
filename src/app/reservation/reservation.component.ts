@@ -17,7 +17,7 @@ export class ReservationComponent implements OnInit {
     name: '',
     email: '',
     passid: '',
-    roomtype: '',
+    room_id: '',
     checkin: '',
     checkout: '',
     noadults: 0,
@@ -30,8 +30,8 @@ export class ReservationComponent implements OnInit {
 
   ngOnInit() {
   }
+
   reservationinfo(reservation: NgForm): void {
-    console.log(reservation.value);
     this.guessbooking.checkin = this.datepipe.transform(this.guessbooking.checkin, 'yyyy-MM-dd');
     this.guessbooking.checkout = this.datepipe.transform(this.guessbooking.checkout, 'yyyy-MM-dd');
     console.log(this.guessbooking);

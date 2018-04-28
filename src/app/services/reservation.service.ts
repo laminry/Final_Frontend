@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 import { Checking } from '../models/checking';
 import { Observable } from 'rxjs/Observable';
 import { Reservation } from '../models/reservation';
+import { Room } from '../models/rooms';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -15,7 +16,6 @@ const httpOptions = {
 export class ReservationService {
   constructor(private http: HttpClient) { }
   private url = 'http://localhost:8000/api/postbooking';
-
   // getRooms(): Observable<Checking[]> {
   //   return this.http.get<Checking[]>(this.url);
   // }

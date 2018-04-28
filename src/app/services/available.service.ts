@@ -16,8 +16,7 @@ const httpOptions = {
 export class AvailableService {
 
   constructor(private http: HttpClient) { }
-  // private url = 'http://localhost:8000/api/availablerooms';
-  private url = 'http://localhost:8000/api/rooms';
+  private url = 'http://localhost:8000/api/availablerooms';
   // getRooms(): Observable<Checking[]> {
   //   return this.http.get<Checking[]>(this.url);
   // }

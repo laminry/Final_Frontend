@@ -6,7 +6,6 @@
         <div class="container formcontainer">
           <div class="innerform">
             <form #reservationform="ngForm" (ngSubmit)="reservationinfo(reservationform)">
-
               <div class="form-group" [class.has-error]="inputname.invalid && inputname.touched">
                 <label for="name" class="control-label">Full Name</label>
                 <input id="name" required type="text" class="form-control" name="name" [(ngModel)]="guessbooking.name" #inputname="ngModel">
@@ -35,7 +34,7 @@
 
               <div class="form-group" [class.has-error]="inputroom.invalid && inputroom.touched">
                 <label for="roomtype">Room Type</label>
-                <select class="form-control col-sm-12" id="roomtype" required name="roomtype" [(ngModel)]="guessbooking.roomtype" #inputroom="ngModel">
+                <select class="form-control col-sm-12" id="roomtype" required name="roomtype" [(ngModel)]="guessbooking.room_id" #inputroom="ngModel">
                   <option>Deluxe Room</option>
                   <option>Superior Room</option>
                   <option>Executive Room</option>
