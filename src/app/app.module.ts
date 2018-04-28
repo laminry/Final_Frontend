@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
+
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'; // BS Datepicker
@@ -24,6 +25,7 @@ import { RoomService } from './services/room.service';
 import { ReservationService } from './services/reservation.service';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,6 @@ import { ReservationService } from './services/reservation.service';
   ],
   imports: [
     BsDatepickerModule.forRoot(), // BS DATE PICKER
-    // NgbModule.forRoot(),
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,

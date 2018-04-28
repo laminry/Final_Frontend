@@ -6,5 +6,16 @@
 
 .formholer{
     margin-top: 50px;
+}
 
+.roomli{
+    list-style-type: none;
+}
+
+.card-body{
+background-color: rgba(47, 166, 221, 0.61);
+}
+
+.help-block{
+    color: red;
 }

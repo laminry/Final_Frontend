@@ -21,19 +21,12 @@ export class HomeComponent implements OnInit {
 
   constructor(private roomService: AvailableService, private datepipe: DatePipe) { }
 
-  ngOnInit() { }
-
+  ngOnInit() {
+  }
   checkSearch() {
-    console.log(this.filterrooms);
     this.filterrooms.checkin = this.datepipe.transform(this.filterrooms.checkin, 'yyyy-MM-dd');
     this.filterrooms.checkout = this.datepipe.transform(this.filterrooms.checkout, 'yyyy-MM-dd');
-    console.log(this.filterrooms);
     this.roomService.getAvailable(this.filterrooms).subscribe(res => { this.rooms = res; });
+    console.log(this.filterrooms);
   }
-
-
-  // checkSearch() {
-    // this.roomService.getAvailable().subscribe(res => { this.rooms = res; });
-    // console.log(this.rooms);
-  // }
 }

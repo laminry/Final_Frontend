@@ -19,14 +19,14 @@ export class RoomsComponent implements OnInit {
     // console.log(this.rooms);
   }
 
-  // bookNow(rid) {
-  //   console.log(this.rooms.indexOf[0]);
+  bookNow(rid) {
+    console.log(this.rooms.indexOf[0]);
     // this.roomService.getType(this.rooms['id']).subscribe(
     //   res => { this.result = res;
     //   console.log(this.result);
     //   },
     //   err => console.log(err.error)
     // );
-  // }
+  }
 
 }

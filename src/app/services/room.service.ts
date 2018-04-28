@@ -21,6 +21,8 @@ export class RoomService {
     return this.http.get<Room[]>(this.url);
   }
 
+  
+
   getType(rid: any) {
     // return this.http2.get('http://localhost:8000/api/type/' + rid).map(res => res.json());
   }

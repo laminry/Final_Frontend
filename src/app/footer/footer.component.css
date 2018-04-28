@@ -3,14 +3,12 @@
     clear: both;
     margin-left: 0px;
     margin-right: 0px;
-    bottom: 0px;
     width: 100%;
 }
 
 .footer-copyright  {
     color: white;
     background-color:black;
-    bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
 }
@@ -24,4 +22,10 @@
 }
 .footerlinks{
     color: red;
+}
+
+
+.footercontainer{
+    bottom: 0px;
+    position: sticky
 }

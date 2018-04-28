@@ -35,15 +35,7 @@
               <div class="form-group" [class.has-error]="inputroom.invalid && inputroom.touched">
                 <label for="roomtype">Room Type</label>
                 <select class="form-control col-sm-12" id="roomtype" required name="roomtype" [(ngModel)]="guessbooking.room_id" #inputroom="ngModel">
-                  <option>Deluxe Room</option>
-                  <option>Superior Room</option>
-                  <option>Executive Room</option>
-                  <option>Cabana</option>
-                  <option>Master Suite</option>
-                  <option>Premier Room</option>
-                  <option>Studio Room</option>
-                  <option>King Room</option>
-                  <option>Queen Room</option>
+                  <option *ngFor="let allrooms of rourooms"> {{allrooms.id}}</option>
                 </select>
                 <span class="help-block" *ngIf="inputroom.invalid && inputroom.touched">
                   Sorry! A room is required.
@@ -53,7 +45,7 @@
 
               <div class="form-group" [class.has-error]="incheckin.invalid && incheckin.touched">
                 <label for="checkin">Check In-Date</label>
-                <input type="date" class="form-control col-sm-12" required  id="checkin" placeholder="yyyy-mm-dd" name="Check In-Date" [(ngModel)]="guessbooking.checkin"
+                <input type="date" class="form-control col-sm-12" required id="checkin" placeholder="yyyy-mm-dd" name="Check In-Date" [(ngModel)]="guessbooking.checkin"
                   #incheckin="ngModel">
                 <span class="help-block" *ngIf="incheckin.invalid && incheckin.touched">
                   Sorry! Check-in date is required.
@@ -85,7 +77,8 @@
 
               <div class="form-group" [class.has-error]="inputkids.invalid && inputkids.touched">
                 <label for="nochildren">No. Children</label>
-                <select class="form-control col-sm-12" required id="nochildren" name="No. Children" [(ngModel)]="guessbooking.nochildren" #inputkids="ngModel">
+                <select class="form-control col-sm-12" required id="nochildren" name="No. Children" [(ngModel)]="guessbooking.nochildren"
+                  #inputkids="ngModel">
                   <option>0</option>
                   <option>1</option>
                   <option>2</option>
@@ -114,6 +107,8 @@
         </div>
       </div>
     </div>
+
+    
   </div>
 
   <div class="col-sm-6 formholer">
@@ -127,20 +122,18 @@
     <br>
     <div class="card text-white bg-info mb-3">
       <div class="card-body">
-        <h5 class="card-title">CONTACT US</h5>
-        <p class="card-text">Kindly contact us for any changes requires. Only availble 3 nights before checkin.</p>
-        <a href="#" class="btn btn-danger" routerLink="/rooms">CHECK OUR ROOMS</a>
-      </div>
-    </div>
-
-    <div class="card text-white bg-info mb-3">
-      <div class="card-body">
-        <h5 class="card-title">CONTACT US</h5>
-        {{reservationform.value | json}}
+         <h5 class="card-title">AVAILABLE ROOMS</h5>
+        <div class="alert alert-info" align="center">
+          <strong>Select Room Index !</strong>
+        </div>
+        <ul>
+          <li class="help-block roomli" *ngFor="let allrooms of rourooms">{{allrooms.id}} - {{allrooms.roomtype}} </li>
+        </ul>
       </div>
     </div>
 
   </div>
 </div>
 
-  <app-footer></app-footer>
+
+<app-footer></app-footer>
